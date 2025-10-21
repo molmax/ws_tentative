@@ -26,7 +26,7 @@ enum Commands {
         #[arg(short, long, default_value = "ws://localhost:8080")]
         url: String,
         /// Your username
-        #[arg(short, long)]
+        #[arg(short = 'n', long)]
         username: String,
     },
 }
