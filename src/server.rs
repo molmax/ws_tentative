@@ -1,4 +1,4 @@
-use crate::shared::{ChatMessage, Client, Clients, create_client, get_user_list};
+use crate::shared::{ChatMessage, Clients, create_client, get_user_list};
 use futures_util::{SinkExt, StreamExt};
 use std::net::SocketAddr;
 use tokio::net::{TcpListener, TcpStream};
@@ -130,7 +130,7 @@ impl ChatServer {
             clients.remove(&client_id);
         }
 
-        let leave_msg = ChatMessage::leave(username_clone);
+        let leave_msg = ChatMessage::leave(username_clone.clone());
         let _ = tx_clone.send(leave_msg);
 
         println!("👋 {} disconnected", username_clone);
