@@ -1,3 +1,5 @@
+## **CURSOR AI TEST**
+
 # WebSocket Chat Application
 
 A terminal-based chat application built with Rust and WebSockets, featuring a clean modular architecture.
